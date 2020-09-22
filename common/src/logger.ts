@@ -1,5 +1,5 @@
 import bunyan from 'bunyan';
-import psj from '../../package.json';
+import psj from '../package.json';
 const { name, version } = psj;
 
 const getLogger = (

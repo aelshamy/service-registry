@@ -1,5 +1,5 @@
+import log from '../../../common/src/logger';
 import config from '../config/config';
-import log from '../config/logger';
 
 const cleanUp = () => {
   const now = Math.floor(Date.now() / 1000);

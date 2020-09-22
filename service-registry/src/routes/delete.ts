@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
+import log from '../../../common/src/logger';
 import config from '../config/config';
-import log from '../config/logger';
 
 const router = express.Router();
 router.delete(

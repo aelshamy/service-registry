@@ -1,5 +1,6 @@
 import { json } from 'body-parser';
 import express, { NextFunction, Request, Response } from 'express';
+import path from 'path';
 import log from '../../common/src/logger';
 import HttpException from './errors/http-exception';
 
@@ -13,6 +14,7 @@ if (app.get('env') === 'development') {
 }
 
 app.use(json());
+app.use('/images/', express.static(path.join(__dirname, '../images')));
 
 app.use(
   (error: HttpException, req: Request, res: Response, next: NextFunction) => {
